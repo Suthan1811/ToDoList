@@ -42,7 +42,7 @@ public class User {
 	public void setUserimage(byte[] userimage) {
 		this.userimage = userimage;
 	}
-	public int getUserId() {
+	public int getUserid() {
 		return userid;
 	}
 
