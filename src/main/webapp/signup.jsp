@@ -12,7 +12,7 @@ margin: 0px;
 }
 #container{
 		height:100vh;
-		background-image: url("https://pixabay.com/illustrations/background-art-abstract-watercolor-2405619/");
+		background-image: url("https://cdn.pixabay.com/photo/2023/01/09/20/18/sunset-7708222_1280.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		display: flex;
@@ -21,7 +21,7 @@ margin: 0px;
 		align-items:center;
 	}
 #box{
-	background: linear-gradient(45deg, white, skyblue);
+	background: linear-gradient(45deg, white, orange);
 	padding: 30px;
 	border-radius:10px;
 	height: 450px;
@@ -46,7 +46,7 @@ height: 20px;
 	
 }
 #submit:hover {
-	background: linear-gradient(45deg, yellow, orange);
+	background: linear-gradient(45deg, white, orange);
 	width: 150px;
 	height: 35px;
 	text-align: center;

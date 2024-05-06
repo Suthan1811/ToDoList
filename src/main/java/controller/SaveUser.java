@@ -36,7 +36,7 @@ public class SaveUser extends HttpServlet{
 		try {
 			int res = dao.saveUser(user);
 			if(res>0) {
-				resp.sendRedirect("login.jsp");
+				resp.sendRedirect("Loginjsp.jsp");
 			}else {
 				resp.sendRedirect("signup.jsp");
 

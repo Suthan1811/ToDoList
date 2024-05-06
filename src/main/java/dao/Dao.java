@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -140,7 +141,7 @@ public class Dao {
 			
 			
 		}
-		public Task UpdateTask(Task task) throws ClassNotFoundException, SQLException
+		public void UpdateTask(Task task) throws ClassNotFoundException, SQLException
 		{
 			Connection con=getConnection();
 			PreparedStatement pst= con.prepareStatement("update task set tasktitle=?,taskid=?,taskdescription=?,taskpriority=?,taskstatus=?,taskduedate=? where taskid=?");
@@ -152,10 +153,16 @@ public class Dao {
 			pst.setString(6, task.getTaskduedate());
 			pst.setInt(7, getTaskId());
 			ResultSet rs = pst.executeQuery();
-			rs.next();
-			return task;
 			
 			
+			
+		}
+		public void updatePriorityBasedOnDuration() throws SQLException, ClassNotFoundException {
+			Connection con = getConnection();
+			Statement st = con.createStatement();
+			st.execute("UPDATE task SET taskpriority = 'high' WHERE taskduedate BETWEEN CURDATE() AND CURDATE() +  INTERVAL 3 DAY");
+			st.execute("UPDATE task SET taskpriority = 'medium' WHERE taskduedate BETWEEN CURDATE() + INTERVAL 4 DAY AND CURDATE() + INTERVAL 7 DAY");
+			st.execute("UPDATE task SET taskpriority = 'low' WHERE taskduedate > CURDATE() + INTERVAL 7 DAY");
 		}
 		
 	}

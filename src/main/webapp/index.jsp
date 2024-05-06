@@ -45,7 +45,7 @@
 	}
 	a:hover {
 	border: 1px solid black;
-	background: linear-gradient(45deg, aqua, navy);
+	background: linear-gradient(45deg, white, orange);
 	width: 135px;
 	color: black;
 }

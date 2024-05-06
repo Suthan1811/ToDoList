@@ -19,7 +19,7 @@ import dto.User;
 public class DeleteTask extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		int taskid= Integer.parseInt("id");
+		int taskid= Integer.parseInt(req.getParameter("id"));
 		Dao dao= new Dao();
 		try {
 			

@@ -6,13 +6,13 @@
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <style >
-	*{
+*{
 padding: 0px;
 margin: 0px;
 }
 #container{
 		height:100vh;
-		background-image: url("https://cdn.pixabay.com/photo/2019/04/24/17/18/space-4152623_1280.jpg");
+		background-image: url(https://cdn.pixabay.com/photo/2020/05/30/09/53/todo-lists-5238324_1280.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		display: flex;
@@ -44,7 +44,7 @@ height: 30px;
 }
 #submit{
 border: 1px solid white;
-	background: linear-gradient(45deg, #003A52, #0785B4);
+	background: linear-gradient(45deg, white, light blue);
 	width: 150px;
 	height: 35px;
 	text-align: center;
@@ -57,7 +57,7 @@ border: 1px solid white;
 	
 }
 #submit:hover {
-	background: linear-gradient(45deg, #0785B4, #003A52);
+	background: linear-gradient(45deg, black,white);
 	width: 150px;
 	height: 35px;
 	text-align: center;

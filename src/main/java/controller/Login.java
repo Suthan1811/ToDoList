@@ -40,12 +40,12 @@ public class Login extends HttpServlet{
 				}else {
 					//password wrong
 					req.setAttribute("message", "password wrong");
-					req.getRequestDispatcher("login.jsp").include(req, resp);
+					req.getRequestDispatcher("Loginjsp.jsp").include(req, resp);
 				}
 			}else {
 				// email is wrong
 				req.setAttribute("message", "wrong email");
-				req.getRequestDispatcher("login.jsp").include(req, resp);
+				req.getRequestDispatcher("Loginjsp.jsp").include(req, resp);
 			}
 			
 		} catch (ClassNotFoundException e) {

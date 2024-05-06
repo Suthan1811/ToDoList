@@ -17,7 +17,7 @@ import dto.Task;
 public class Edit extends HttpServlet{
 @Override
 protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	int id= Integer.parseInt(req.getParameter("edit"));
+	int id= Integer.parseInt(req.getParameter("id"));
 	Dao dao= new Dao();
 	try {
 		Task task = dao.findtaskById(id);
